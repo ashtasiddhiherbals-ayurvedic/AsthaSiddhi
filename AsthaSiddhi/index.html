@@ -1,0 +1,1545 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AshtaSiddhi Herbals — Ancient Ayurvedic Wisdom, Modern Wellness</title>
+<meta name="description" content="AshtaSiddhi Herbals — Premium Ayurvedic formulations merging 5,000 years of botanical tradition with clinical precision. GMP Certified. ISO Certified. 100% Natural."/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "primary": "#2e5222",
+          "primary-dark": "#1e3817",
+          "secondary": "#735b24",
+          "gold": "#C8A96A",
+          "gold-light": "#f0daa8",
+          "surface": "#fcf9f2",
+          "surface-container-low": "#f6f3ec",
+          "surface-container": "#f0eee7",
+          "surface-container-high": "#ebe8e1",
+          "surface-container-highest": "#e5e2db",
+          "on-surface": "#1c1c18",
+          "on-surface-variant": "#43493e",
+          "outline-variant": "#c3c9bb",
+          "background": "#fcf9f2",
+        },
+        fontFamily: {
+          serif: ["Playfair Display", "Georgia", "serif"],
+          sans: ["Plus Jakarta Sans", "sans-serif"],
+        },
+        maxWidth: { "container": "1280px" }
+      },
+    },
+  }
+</script>
+<style>
+  :root { --gold: #C8A96A; --green-primary: #2e5222; }
+
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+
+  .glass-nav {
+    background: rgba(252, 249, 242, 0.92);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 0.5px solid rgba(195, 201, 187, 0.4);
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 0.5px solid rgba(255, 255, 255, 0.35);
+  }
+
+  .ambient-shadow { box-shadow: 0 40px 70px -15px rgba(46, 82, 34, 0.10); }
+
+  .hero-overlay {
+    background: linear-gradient(105deg, rgba(10,20,8,0.75) 0%, rgba(10,20,8,0.45) 55%, rgba(10,20,8,0.2) 100%);
+  }
+  .hero-bottom-fade {
+    background: linear-gradient(to bottom, transparent 55%, rgba(252,249,242,0.97) 100%);
+  }
+
+  .divider-gold {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    opacity: 0.4;
+  }
+
+  .text-gold { color: var(--gold); }
+
+  .nav-link {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #43493e;
+    transition: color 0.2s;
+    padding-bottom: 2px;
+    text-decoration: none;
+  }
+  .nav-link:hover, .nav-link.active { color: #2e5222; border-bottom: 2px solid #2e5222; }
+
+  .btn-primary {
+    background: #2e5222;
+    color: #fff;
+    padding: 0.85rem 2.2rem;
+    border-radius: 0.5rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: background 0.22s, transform 0.15s, box-shadow 0.22s;
+    box-shadow: 0 6px 20px rgba(46, 82, 34, 0.22);
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    border: none;
+  }
+  .btn-primary:hover { background: #1e3817; transform: translateY(-1px); }
+  .btn-primary:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+
+  .btn-secondary {
+    border: 1.5px solid var(--gold);
+    color: #735b24;
+    padding: 0.85rem 2.2rem;
+    border-radius: 0.5rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background: transparent;
+    transition: background 0.22s, transform 0.15s;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+  }
+  .btn-secondary:hover { background: rgba(200,169,106,0.08); transform: translateY(-1px); }
+
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+  .concern-card:hover img { transform: scale(1.08); }
+  .concern-card img { transition: transform 0.65s cubic-bezier(0.4, 0, 0.2, 1); }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(28px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .fade-up { animation: fadeUp 0.8s ease forwards; }
+  .fade-up-delay-1 { animation: fadeUp 0.8s 0.15s ease both; }
+  .fade-up-delay-2 { animation: fadeUp 0.8s 0.3s ease both; }
+  .fade-up-delay-3 { animation: fadeUp 0.8s 0.45s ease both; }
+
+  .ingredient-letter {
+    width: 4rem; height: 4rem; border-radius: 50%;
+    background: rgba(200,169,106,0.15);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem; font-weight: 700; color: #2e5222; flex-shrink: 0;
+  }
+
+  .faq-item .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+  .faq-item.open .faq-answer { max-height: 300px; }
+  .faq-item .faq-icon { transition: transform 0.3s ease; }
+  .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+  .scroll-reveal {
+    opacity: 0; transform: translateY(24px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+  }
+  .scroll-reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* Product modal */
+  .modal-overlay {
+    position: fixed; inset: 0; z-index: 200;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(4px);
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  .modal-overlay.open { opacity: 1; pointer-events: all; }
+  .modal-box {
+    background: #fcf9f2; border-radius: 2rem;
+    width: min(680px, 94vw); max-height: 88vh;
+    overflow-y: auto; padding: 2.5rem;
+    transform: scale(0.96) translateY(20px);
+    transition: transform 0.3s ease;
+    position: relative;
+  }
+  .modal-overlay.open .modal-box { transform: scale(1) translateY(0); }
+  .modal-box::-webkit-scrollbar { width: 4px; }
+  .modal-box::-webkit-scrollbar-thumb { background: #c3c9bb; border-radius: 2px; }
+
+  .composition-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+  .composition-table td { padding: 0.4rem 0.6rem; border-bottom: 1px solid #e5e2db; }
+  .composition-table tr:last-child td { border-bottom: none; }
+  .composition-table td:last-child { text-align: right; font-weight: 600; color: #2e5222; white-space: nowrap; }
+
+  .tag-badge {
+    display: inline-flex; align-items: center;
+    padding: 0.3rem 0.8rem; border-radius: 9999px;
+    font-size: 0.65rem; font-weight: 600; letter-spacing: 0.08em;
+    text-transform: uppercase; margin: 0.2rem;
+  }
+
+  #enquiry-status {
+    font-size: 0.78rem;
+    font-weight: 600;
+    margin-top: 0.25rem;
+    display: none;
+  }
+  #enquiry-status.show { display: block; }
+  #enquiry-status.success { color: #2e5222; }
+  #enquiry-status.error { color: #b3261e; }
+
+  @media (max-width: 768px) {
+    body { padding-bottom: 70px; }
+    .modal-box { padding: 1.5rem; }
+  }
+</style>
+</head>
+
+<body class="bg-background text-on-surface font-sans overflow-x-hidden">
+
+<!-- ═══════════════════════════════════════════════
+     NAVIGATION
+═══════════════════════════════════════════════ -->
+<nav id="main-nav" class="fixed top-0 w-full z-50 glass-nav transition-all duration-300">
+  <div class="max-w-container mx-auto px-4 md:px-16 flex justify-between items-center" style="height:80px;">
+    
+    <!-- Logo + Brand Name (Left) -->
+    <a href="#" class="flex items-center gap-3 no-underline">
+      <img src="./AsT Log.png" alt="AshtaSiddhi Herbals" class="h-12 w-auto object-contain" style="max-width:160px;"/>
+      <span class="font-serif" style="font-size:1.1rem;font-weight:700;letter-spacing:0.04em;color:#2e5222;white-space:nowrap;">
+        ASHTASIDDHI HERBALS
+      </span>
+    </a>
+
+    <div class="hidden md:flex items-center gap-8">
+      <a href="#products" class="nav-link">Products</a>
+      <a href="#solutions" class="nav-link">Solutions</a>
+      <a href="#tradition" class="nav-link">Tradition</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </div>
+
+    <!-- Right side: Sanskrit line instead of Enquire Now -->
+    <span class="hidden md:inline-block font-serif" style="font-size:1rem;font-weight:600;color:#2e5222;letter-spacing:0.02em;">
+      अंतः अस्ति प्रारंभः
+    </span>
+
+    <button id="mobile-menu-btn" class="md:hidden text-on-surface-variant" aria-label="Menu">
+      <span class="material-symbols-outlined" style="font-size:26px;">menu</span>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-surface-container-low border-t border-outline-variant/30">
+    <div class="px-6 py-4 space-y-3">
+      <a href="#products" class="block nav-link py-2" onclick="closeMobileMenu()">Products</a>
+      <a href="#solutions" class="block nav-link py-2" onclick="closeMobileMenu()">Solutions</a>
+      <a href="#tradition" class="block nav-link py-2" onclick="closeMobileMenu()">Tradition</a>
+      <a href="#about" class="block nav-link py-2" onclick="closeMobileMenu()">About</a>
+      <a href="#contact" class="block nav-link py-2" onclick="closeMobileMenu()">Contact</a>
+      <span class="block font-serif py-2" style="color:#2e5222;">अंतः अस्ति प्रारंभः</span>
+    </div>
+  </div>
+</nav>
+<!-- ═══════════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════════ -->
+<section class="relative min-h-screen flex items-center overflow-hidden" style="padding-top:80px;">
+  <div class="absolute inset-0 z-0">
+    <img src="./herrr.png" alt="AshtaSiddhi Herbals" class="w-full h-full object-cover" loading="eager"/>
+    <div class="hero-overlay absolute inset-0"></div>
+    <div class="hero-bottom-fade absolute inset-0"></div>
+    <div class="absolute inset-0" style="background:rgba(20,40,15,0.15);mix-blend-mode:multiply;"></div>
+  </div>
+
+  <div class="relative z-10 max-w-container mx-auto px-4 md:px-16 w-full py-24">
+    <div class="max-w-2xl">
+      <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full fade-up mb-6"
+            style="background:rgba(200,169,106,0.15);border:1px solid rgba(200,169,106,0.35);color:#f0daa8;font-size:0.7rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;">
+        <span class="material-symbols-outlined" style="font-size:14px;font-variation-settings:'FILL' 1;">eco</span>
+        The Source of Life
+      </span>
+      <h1 class="font-serif fade-up-delay-1" style="font-size:clamp(2.4rem,5vw,3.8rem);font-weight:700;line-height:1.05;letter-spacing:-0.02em;color:#ffffff;">
+        Ancient Wisdom.<br/><span style="color:#C8A96A;">Modern Healing.</span>
+      </h1>
+      <p class="fade-up-delay-2 mt-6" style="font-size:1.1rem;line-height:1.75;max-width:520px;color:rgba(255,255,255,0.82);">
+        Premium Ayurvedic formulations merging 5,000 years of botanical tradition with clinical precision — restoring your body's natural harmony from within.
+      </p>
+      <div class="flex flex-wrap gap-4 mt-8 fade-up-delay-3">
+        <a href="#products" class="btn-primary">Explore Products</a>
+        <a href="#tradition" class="btn-secondary" style="border-color:rgba(200,169,106,0.6);color:#f0daa8;">Our Ingredients</a>
+      </div>
+      <div class="flex flex-wrap gap-8 mt-12 fade-up-delay-3">
+        <div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Trust Bar -->
+  <div class="absolute bottom-10 left-0 right-0 z-10 hidden md:block">
+    <div class="max-w-container mx-auto px-16">
+      <div class="grid grid-cols-4 gap-4 glass-card rounded-2xl p-5 ambient-shadow">
+        
+        <div class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-primary" style="font-variation-settings:'FILL' 1;font-size:20px;">verified</span>
+          <span style="font-size:0.68rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#1c1c18;">GMP Certified</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-primary" style="font-variation-settings:'FILL' 1;font-size:20px;">health_and_safety</span>
+          <span style="font-size:0.68rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#1c1c18;">ISO Certified</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-primary" style="font-variation-settings:'FILL' 1;font-size:20px;">local_shipping</span>
+          <span style="font-size:0.68rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#1c1c18;">Pan India Delivery</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-primary" style="font-variation-settings:'FILL' 1;font-size:20px;">eco</span>
+          <span style="font-size:0.68rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#1c1c18;">Natural</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     WHY CHOOSE US
+═══════════════════════════════════════════════ -->
+<section id="about" class="py-24 max-w-container mx-auto px-4 md:px-16 scroll-reveal">
+  <div class="text-center mb-16 max-w-xl mx-auto">
+    <span style="font-size:0.7rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);">Our Promise</span>
+    <h2 class="font-serif mt-3" style="font-size:2rem;font-weight:600;color:#2e5222;line-height:1.3;">Rooted in Purity.<br/>Delivered with Science.</h2>
+    <p class="mt-4 text-on-surface-variant" style="font-size:0.95rem;line-height:1.7;">
+      We bridge the gap between ancient Ayurvedic remedies and modern lifestyles through meticulous sourcing, ethical formulation, and rigorous testing.
+    </p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <div class="relative rounded-[28px] overflow-hidden" style="height:360px;">
+      <img src="./heroo new.png" alt="AshtaSiddhi Herbals Product Range" class="w-full h-full object-cover"/>
+      <div class="absolute inset-0" style="background:linear-gradient(to top, rgba(46,82,34,0.5) 0%, transparent 60%);"></div>
+      <div class="absolute bottom-5 left-5 right-5">
+        <p class="text-white font-serif text-xl font-semibold">Care by Nature, Trusted for Wellness.</p>
+        <p class="text-white/75 text-sm mt-1">Pure Ayurvedic formulations crafted with time-tested herbs.</p>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+      <div class="p-6 rounded-2xl bg-surface-container-low hover:bg-white transition-all duration-300 border border-transparent hover:border-outline-variant group ambient-shadow">
+        <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+          <span class="material-symbols-outlined text-primary">forest</span>
+        </div>
+        <h3 class="font-serif text-lg font-semibold mb-2">Wild-Crafted Herbs</h3>
+        <p class="text-on-surface-variant text-sm leading-relaxed">Sustainably harvested herbs from Himalayas, Western Ghats, and tribal forest belts.</p>
+      </div>
+      <div class="p-6 rounded-2xl bg-surface-container-low hover:bg-white transition-all duration-300 border border-transparent hover:border-outline-variant group ambient-shadow">
+        <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+          <span class="material-symbols-outlined text-primary">history_edu</span>
+        </div>
+        <h3 class="font-serif text-lg font-semibold mb-2">Ancient Formulas</h3>
+        <p class="text-on-surface-variant text-sm leading-relaxed">Authentic recipes from Charaka Samhita and Ashtanga Hridayam, refined for today.</p>
+      </div>
+      <div class="p-6 rounded-2xl bg-surface-container-low hover:bg-white transition-all duration-300 border border-transparent hover:border-outline-variant group ambient-shadow">
+        <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+          <span class="material-symbols-outlined text-primary">biotech</span>
+        </div>
+        <h3 class="font-serif text-lg font-semibold mb-2">Clinical Precision</h3>
+        <p class="text-on-surface-variant text-sm leading-relaxed">GMP & ISO certified facility. NABL-accredited lab tests for potency and purity.</p>
+      </div>
+      <div class="p-6 rounded-2xl bg-surface-container-low hover:bg-white transition-all duration-300 border border-transparent hover:border-outline-variant group ambient-shadow">
+        <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+          <span class="material-symbols-outlined text-primary">support_agent</span>
+        </div>
+        <h3 class="font-serif text-lg font-semibold mb-2">Expert Guidance</h3>
+        <p class="text-on-surface-variant text-sm leading-relaxed">Free consultations by qualified Ayurvedic physicians for personalised formulations.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     ALL PRODUCTS
+═══════════════════════════════════════════════ -->
+<section id="products" class="py-24 max-w-container mx-auto px-4 md:px-16">
+  <div class="text-center mb-14 scroll-reveal">
+    <span style="font-size:0.7rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);">Complete Range</span>
+    <h2 class="font-serif mt-3" style="font-size:2rem;font-weight:600;color:#2e5222;">Our Formulations</h2>
+    <p class="mt-3 text-on-surface-variant text-sm max-w-lg mx-auto leading-relaxed">
+      Clinically precise, natural products. Click any product to view full composition and indications.
+    </p>
+  </div>
+
+  <!-- Filter Tabs -->
+  <div class="flex flex-wrap gap-3 justify-center mb-12 scroll-reveal">
+    <button class="filter-btn active-filter" onclick="filterProducts('all', this)">All Products</button>
+    <button class="filter-btn" onclick="filterProducts('mental', this)">Mental Wellness</button>
+    <button class="filter-btn" onclick="filterProducts('joint', this)">Joint & Bone</button>
+    <button class="filter-btn" onclick="filterProducts('liver', this)">Liver Care</button>
+    <button class="filter-btn" onclick="filterProducts('immunity', this)">Immunity</button>
+    <button class="filter-btn" onclick="filterProducts('kidney', this)">Kidney</button>
+    <button class="filter-btn" onclick="filterProducts('respiratory', this)">Respiratory</button>
+    <button class="filter-btn" onclick="filterProducts('women', this)">Women's Health</button>
+    <button class="filter-btn" onclick="filterProducts('men', this)">Men's Health</button>
+  </div>
+
+  <style>
+    .filter-btn {
+      padding: 0.5rem 1.2rem; border-radius: 9999px;
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.07em;
+      text-transform: uppercase; cursor: pointer; border: 1.5px solid #c3c9bb;
+      background: transparent; color: #43493e;
+      transition: all 0.2s;
+    }
+    .filter-btn:hover, .filter-btn.active-filter {
+      background: #2e5222; color: #fff; border-color: #2e5222;
+    }
+  </style>
+
+  <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+
+    <!-- MANAS CALM SYRUP -->
+    <div class="product-card scroll-reveal group cursor-pointer" data-category="mental" onclick="openModal('manas-calm-syrup')">
+      <div class="relative rounded-3xl overflow-hidden mb-5" style="background:#f0edf8;height:300px;">
+        <span class="absolute top-4 left-4 z-10 px-3 py-1 rounded-full text-white text-xs font-semibold" style="background:#2e5222;font-size:0.65rem;letter-spacing:0.08em;text-transform:uppercase;">Syrup · 200ml</span>
+        <img class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" src="./syp manas.png" alt="Manas Calm Syrup"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+          <span class="bg-white text-primary rounded-full px-4 py-2 text-xs font-bold tracking-widest uppercase">View Details</span>
+        </div>
+      </div>
+      <div class="space-y-1">
+        <h3 class="font-serif text-xl font-semibold">Manas Calm Syrup------MRP ₹249</h3>
+        <p class="text-on-surface-variant text-sm">Herbal Tranquilizer · Stress & Sleep Support</p>
+        <p class="text-sm text-on-surface-variant leading-relaxed mt-2">Ashwagandha, Brahmi, Jatamansi, Shankhpushpi — calms nervous system, promotes restful sleep, reduces anxiety. Non-addictive.</p>
+        <div class="flex flex-wrap mt-3 gap-1">
+          <span class="tag-badge" style="background:#f0edf8;color:#5a3a8c;">Stress</span>
+          <span class="tag-badge" style="background:#f0edf8;color:#5a3a8c;">Insomnia</span>
+          <span class="tag-badge" style="background:#f0edf8;color:#5a3a8c;">Anxiety</span>
+          <span class="tag-badge" style="background:#f0edf8;color:#5a3a8c;">Sugar Free</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- MANAS CALM CAPSULE -->
+    <div class="product-card scroll-reveal group cursor-pointer" data-category="mental" onclick="openModal('manas-calm-cap')">
+      <div class="relative rounded-3xl overflow-hidden mb-5" style="background:#f0edf8;height:300px;">
+        <span class="absolute top-4 left-4 z-10 px-3 py-1 rounded-full text-white text-xs font-semibold" style="background:#735b24;font-size:0.65rem;letter-spacing:0.08em;text-transform:uppercase;">Capsule · 1×10</span>
+        <img class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" src="./Manas Calm Cap.png" alt="Manas Calm Capsule"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+          <span class="bg-white text-primary rounded-full px-4 py-2 text-xs font-bold tracking-widest uppercase">View Details</span>
+        </div>
+      </div>
+      <div class="space-y-1">
+        <h3 class="font-serif text-xl font-semibold">Manas Calm Capsule------MRP ₹159</h3>
+        <p class="text-on-surface-variant text-sm">Mental Calm & Emotional Balance · 1×10</p>
+        <p class="text-sm text-on-surface-variant leading-relaxed mt-2">Shankhpushpi, Brahmi, Ashwagandha, Jatamansi, Tagar — reduces stress, enhances focus, improves sleep quality without habit formation.</p>
+        <div class="flex flex-wrap mt-3 gap-1">
+          <span class="tag-badge" style="background:#f0edf8;color:#5a3a8c;">Stress</span>
+          <span class="tag-badge" style="background:#f0edf8;color:#5a3a8c;">Mental Fatigue</span>
+          <span class="tag-badge" style="background:#f0edf8;color:#5a3a8c;">Sleep</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- JOD SANJIVANI -->
+    <div class="product-card scroll-reveal group cursor-pointer" data-category="joint" onclick="openModal('jod-sanjivani')">
+      <div class="relative rounded-3xl overflow-hidden mb-5" style="background:#f5f0e2;height:300px;">
+        <span class="absolute top-4 left-4 z-10 px-3 py-1 rounded-full text-white text-xs font-semibold" style="background:#2e5222;font-size:0.65rem;letter-spacing:0.08em;text-transform:uppercase;">Syrup · 300ml · Sugar Free</span>
+        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="./js syp.png" alt="Jod Sanjivani Syrup"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+          <span class="bg-white text-primary rounded-full px-4 py-2 text-xs font-bold tracking-widest uppercase">View Details</span>
+        </div>
+      </div>
+      <div class="space-y-1">
+        <h3 class="font-serif text-xl font-semibold">Jod Sanjivani------MRP ₹389</h3>
+        <p class="text-on-surface-variant text-sm">Joint Care Syrup · 300ml</p>
+        <p class="text-sm text-on-surface-variant leading-relaxed mt-2">Haldi, Shallaki, Nirgundi, Ashwagandha, Hadjod — relieves arthritis, back pain, knee pain, muscle stiffness. Improves mobility. Sugar Free.</p>
+        <div class="flex flex-wrap mt-3 gap-1">
+          <span class="tag-badge" style="background:#fff8e7;color:#735b24;">Arthritis</span>
+          <span class="tag-badge" style="background:#fff8e7;color:#735b24;">Back Pain</span>
+          <span class="tag-badge" style="background:#fff8e7;color:#735b24;">Knee Pain</span>
+          <span class="tag-badge" style="background:#fff8e7;color:#735b24;">Sciatica</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- JODCAL GOLD -->
+    <div class="product-card scroll-reveal group cursor-pointer" data-category="joint" onclick="openModal('jodcal-gold')">
+      <div class="relative rounded-3xl overflow-hidden mb-5" style="background:#f9f3e0;height:300px;">
+        <span class="absolute top-4 left-4 z-10 px-3 py-1 rounded-full text-white text-xs font-semibold" style="background:#C8A96A;color:#1c1c18;font-size:0.65rem;letter-spacing:0.08em;text-transform:uppercase;">Capsule · 1x10 · Gold & Calcium</span>
+        <img class="w-full h-full object-contain object-center group-hover:scale-105 transition-transform duration-500 p-4" src="./Jodcal.png" alt="Jodcal Gold Capsule"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+          <span class="bg-white text-primary rounded-full px-4 py-2 text-xs font-bold tracking-widest uppercase">View Details</span>
+        </div>
+      </div>
+      <div class="space-y-1">
+        <h3 class="font-serif text-xl font-semibold">Jodcal Gold------MRP ₹200</h3>
+        <p class="text-on-surface-variant text-sm">Advanced Joint & Bone Formula · 1x10 Capsules</p>
+        <p class="text-sm text-on-surface-variant leading-relaxed mt-2">Kesar, Swarna Bhasma, Gugle Salai, Shudh Shilajit, Hadjod — supports mobility in arthritis, relieves joint pain, improves bone strength.</p>
+        <div class="flex flex-wrap mt-3 gap-1">
+          <span class="tag-badge" style="background:#fff8e7;color:#735b24;">Joint Pain</span>
+          <span class="tag-badge" style="background:#fff8e7;color:#735b24;">Arthritis</span>
+          <span class="tag-badge" style="background:#fff8e7;color:#735b24;">Bone Health</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- URIC EASE -->
+    <div class="product-card scroll-reveal group cursor-pointer" data-category="joint" onclick="openModal('uric-ease')">
+      <div class="relative rounded-3xl overflow-hidden mb-5" style="background:#f9eeee;height:300px;">
+        <span class="absolute top-4 left-4 z-10 px-3 py-1 rounded-full text-white text-xs font-semibold" style="background:#8b1a1a;font-size:0.65rem;letter-spacing:0.08em;text-transform:uppercase;">Capsule · 1×10</span>
+        <img class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" src="./uric ease.png" alt="Uric Ease Capsule"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+          <span class="bg-white text-primary rounded-full px-4 py-2 text-xs font-bold tracking-widest uppercase">View Details</span>
+        </div>
+      </div>
+      <div class="space-y-1">
+        <h3 class="font-serif text-xl font-semibold">Uric Ease------MRP ₹189</h3>
+        <p class="text-on-surface-variant text-sm">Uric Acid & Gout Control · 1×10 Capsules</p>
+        <p class="text-sm text-on-surface-variant leading-relaxed mt-2">Kaishor Guggal, Gokhru, Punarnava, Haldi, Shallaki — controls uric acid, prevents gout, reduces joint swelling. Natural anti-inflammatory.</p>
+        <div class="flex flex-wrap mt-3 gap-1">
+          <span class="tag-badge" style="background:#ffeef0;color:#8b1a1a;">Uric Acid</span>
+          <span class="tag-badge" style="background:#ffeef0;color:#8b1a1a;">Gout</span>
+          <span class="tag-badge" style="background:#ffeef0;color:#8b1a1a;">Hyper Uricemia</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CURPI Q -->
+    <div class="product-card scroll-reveal group cursor-pointer" data-category="immunity" onclick="openModal('curpi-q')">
+      <div class="relative rounded-3xl overflow-hidden mb-5" style="background:#fef9ec;height:300px;">
+        <span class="absolute top-4 left-4 z-10 px-3 py-1 rounded-full text-white text-xs font-semibold" style="background:#C8A96A;color:#1c1c18;font-size:0.65rem;letter-spacing:0.08em;text-transform:uppercase;">Capsule · 20 Cap</span>
+        <img class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" src="./cupriqpp.png" alt="Curpi Q Capsule"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+          <span class="bg-white text-primary rounded-full px-4 py-2 text-xs font-bold tracking-widest uppercase">View Details</span>
+        </div>
+      </div>
+      <div class="space-y-1">
+        <h3 class="font-serif text-xl font-semibold">Curpi Q------MRP ₹349</h3>
+        <p class="text-on-surface-variant text-sm">Immunity Booster · 20 Capsules</p>
+        <p class="text-sm text-on-surface-variant leading-relaxed mt-2">Turmeric Extract 475mg, Piperine 25mg — strengthens immunity, powerful anti-inflammatory and antioxidant, supports digestion and overall wellness.</p>
+        <div class="flex flex-wrap mt-3 gap-1">
+          <span class="tag-badge" style="background:#fef9ec;color:#735b24;">Immunity</span>
+          <span class="tag-badge" style="background:#fef9ec;color:#735b24;">Inflammation</span>
+          <span class="tag-badge" style="background:#fef9ec;color:#735b24;">Antioxidant</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ASHTA LIV SYRUP -->
+    <div class="product-card scroll-reveal group cursor-pointer" data-category="liver" onclick="openModal('ashta-liv-syrup')">
+      <div class="relative rounded-3xl overflow-hidden mb-5" style="background:#e8f2e2;height:300px;">
+        <span class="absolute top-4 left-4 z-10 px-3 py-1 rounded-full text-white text-xs font-semibold" style="background:#2e5222;font-size:0.65rem;letter-spacing:0.08em;text-transform:uppercase;">Syrup · 200ml</span>
+        <img class="w-full h-full object-contain object-center group-hover:scale-105 transition-transform duration-500 p-4" src="./Asstha liv.png" alt="Ashta Liv Syrup"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+          <span class="bg-white text-primary rounded-full px-4 py-2 text-xs font-bold tracking-widest uppercase">View Details</span>
+        </div>
+      </div>
+      <div class="space-y-1">
+        <h3 class="font-serif text-xl font-semibold">Ashta Liv Syrup------MRP ₹299</h3>
+        <p class="text-on-surface-variant text-sm">Natural Liver Syrup · 200ml</p>
+        <p class="text-sm text-on-surface-variant leading-relaxed mt-2">Bhringraj, Bhumiamla, Kalmegh, Punernava, Kutki, Giloy — protects liver cells, improves liver function (SGOT/SGPT), supports detoxification.</p>
+        <div class="flex flex-wrap mt-3 gap-1">
+          <span class="tag-badge" style="background:#e8f2e2;color:#2e5222;">Fatty Liver</span>
+          <span class="tag-badge" style="background:#e8f2e2;color:#2e5222;">Hepatitis</span>
+          <span class="tag-badge" style="background:#e8f2e2;color:#2e5222;">Digestion</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ASHTA LIV DS CAPSULE -->
+    <div class="product-card scroll-reveal group cursor-pointer" data-category="liver" onclick="openModal('ashta-liv-ds')">
+      <div class="relative rounded-3xl overflow-hidden mb-5" style="background:#eef4e8;height:300px;">
+        <span class="absolute top-4 left-4 z-10 px-3 py-1 rounded-full text-white text-xs font-semibold" style="background:#2e5222;font-size:0.65rem;letter-spacing:0.08em;text-transform:uppercase;">Capsule · 1x10</span>
+        <img class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" src="./ds.png" alt="AshtaLiv DS Capsule"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+          <span class="bg-white text-primary rounded-full px-4 py-2 text-xs font-bold tracking-widest uppercase">View Details</span>
+        </div>
+      </div>
+      <div class="space-y-1">
+        <h3 class="font-serif text-xl font-semibold">AshtaLiv DS------MRP ₹129</h3>
+        <p class="text-on-surface-variant text-sm">Natural Liver Capsule · 1x10</p>
+        <p class="text-sm text-on-surface-variant leading-relaxed mt-2">Bhumyamalaki, Kutki, Kalmegh — supports liver detoxification, promotes liver function, protects from toxins. GMP & ISO Certified.</p>
+        <div class="flex flex-wrap mt-3 gap-1">
+          <span class="tag-badge" style="background:#e8f2e2;color:#2e5222;">Liver Detox</span>
+          <span class="tag-badge" style="background:#e8f2e2;color:#2e5222;">Liver Health</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ASHTA VRIQ -->
+    <div class="product-card scroll-reveal group cursor-pointer" data-category="kidney" onclick="openModal('ashta-vriq')">
+      <div class="relative rounded-3xl overflow-hidden mb-5" style="background:#e0f4f0;height:300px;">
+        <span class="absolute top-4 left-4 z-10 px-3 py-1 rounded-full text-white text-xs font-semibold" style="background:#0d6e5a;font-size:0.65rem;letter-spacing:0.08em;text-transform:uppercase;">Syrup · 200ml · Sugar Free</span>
+        <img class="w-full h-full object-contain object-center group-hover:scale-105 transition-transform duration-500 p-4" src="./Astha Virq.png" alt="Ashta Vriq Syrup"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+          <span class="bg-white text-primary rounded-full px-4 py-2 text-xs font-bold tracking-widest uppercase">View Details</span>
+        </div>
+      </div>
+      <div class="space-y-1">
+        <h3 class="font-serif text-xl font-semibold">Ashta Vriq------MRP ₹249</h3>
+        <p class="text-on-surface-variant text-sm">Kidney Function Tonic · 200ml</p>
+        <p class="text-sm text-on-surface-variant leading-relaxed mt-2">Varun Chhal, Punernava, Gokhshru, Ashwagandha, Shatavari — supports kidney function, helps in natural detoxification, reduces burning urination.</p>
+        <div class="flex flex-wrap mt-3 gap-1">
+          <span class="tag-badge" style="background:#e0f4f0;color:#0d6e5a;">Kidney Health</span>
+          <span class="tag-badge" style="background:#e0f4f0;color:#0d6e5a;">UTI</span>
+          <span class="tag-badge" style="background:#e0f4f0;color:#0d6e5a;">Sugar Free</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ASHTA KAS -->
+    <div class="product-card scroll-reveal group cursor-pointer" data-category="respiratory" onclick="openModal('ashta-kas')">
+      <div class="relative rounded-3xl overflow-hidden mb-5" style="background:#fff5e0;height:300px;">
+        <span class="absolute top-4 left-4 z-10 px-3 py-1 rounded-full text-white text-xs font-semibold" style="background:#d4740a;font-size:0.65rem;letter-spacing:0.08em;text-transform:uppercase;">Syrup · 100ml · Honey Based</span>
+        <img class="w-full h-full object-contain object-center group-hover:scale-105 transition-transform duration-500 p-4" src="./Astha Kas.png" alt="Ashta Kas Cough Syrup"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+          <span class="bg-white text-primary rounded-full px-4 py-2 text-xs font-bold tracking-widest uppercase">View Details</span>
+        </div>
+      </div>
+      <div class="space-y-1">
+        <h3 class="font-serif text-xl font-semibold">Ashta Kas------MRP ₹159</h3>
+        <p class="text-on-surface-variant text-sm">Herbal Cough Syrup · 100ml</p>
+        <p class="text-sm text-on-surface-variant leading-relaxed mt-2">Apamarg, Kantakari, Vasa, Baheda, Pippali, Haridra — relieves cough, soothes throat irritation, reduces chest congestion, supports lung health.</p>
+        <div class="flex flex-wrap mt-3 gap-1">
+          <span class="tag-badge" style="background:#fff5e0;color:#d4740a;">Cough</span>
+          <span class="tag-badge" style="background:#fff5e0;color:#d4740a;">Bronchitis</span>
+          <span class="tag-badge" style="background:#fff5e0;color:#d4740a;">Chest Congestion</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SITO SAT -->
+    <div class="product-card scroll-reveal group cursor-pointer" data-category="respiratory" onclick="openModal('sito-sat')">
+      <div class="relative rounded-3xl overflow-hidden mb-5" style="background:#e0f5f0;height:300px;">
+        <span class="absolute top-4 left-4 z-10 px-3 py-1 rounded-full text-white text-xs font-semibold" style="background:#0d6e5a;font-size:0.65rem;letter-spacing:0.08em;text-transform:uppercase;">Churna · 50gm</span>
+        <img class="w-full h-full object-contain object-center group-hover:scale-105 transition-transform duration-500 p-4" src="./Sito sol.png" alt="SitoSat Cough Churna"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+          <span class="bg-white text-primary rounded-full px-4 py-2 text-xs font-bold tracking-widest uppercase">View Details</span>
+        </div>
+      </div>
+      <div class="space-y-1">
+        <h3 class="font-serif text-xl font-semibold">SitoSat------Coming Soon</h3>
+        <p class="text-on-surface-variant text-sm">Cough Churna · 50gm</p>
+        <p class="text-sm text-on-surface-variant leading-relaxed mt-2">Sita Mishri, Mulethi, Lavang, Elaichi, Dalchini — soothes throat irritation, provides relief in dry & productive cough, instant cooling effect.</p>
+        <div class="flex flex-wrap mt-3 gap-1">
+          <span class="tag-badge" style="background:#e0f5f0;color:#0d6e5a;">Sore Throat</span>
+          <span class="tag-badge" style="background:#e0f5f0;color:#0d6e5a;">Dry Cough</span>
+          <span class="tag-badge" style="background:#e0f5f0;color:#0d6e5a;">Throat Dryness</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SHE WELL PLUS -->
+    <div class="product-card scroll-reveal group cursor-pointer" data-category="women" onclick="openModal('she-well-plus')">
+      <div class="relative rounded-3xl overflow-hidden mb-5" style="background:#f5eef8;height:300px;">
+        <span class="absolute top-4 left-4 z-10 px-3 py-1 rounded-full text-white text-xs font-semibold" style="background:#7b5ea7;font-size:0.65rem;letter-spacing:0.08em;text-transform:uppercase;">Capsule · 1×10</span>
+        <img class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" src="./she welllppp.png" alt="She Well Plus Capsule"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+          <span class="bg-white text-primary rounded-full px-4 py-2 text-xs font-bold tracking-widest uppercase">View Details</span>
+        </div>
+      </div>
+      <div class="space-y-1">
+        <h3 class="font-serif text-xl font-semibold">She Well Plus------MRP ₹199</h3>
+        <p class="text-on-surface-variant text-sm">Women's Herbal Uterine · 1×10 Capsules</p>
+        <p class="text-sm text-on-surface-variant leading-relaxed mt-2">Lodhra, Ashoka, Shatavari, Ashwagandha, Jatamansi — supports uterine health, hormonal balance, manages menstrual irregularities, reduces fatigue.</p>
+        <div class="flex flex-wrap mt-3 gap-1">
+          <span class="tag-badge" style="background:#f5eef8;color:#7b5ea7;">Hormonal Balance</span>
+          <span class="tag-badge" style="background:#f5eef8;color:#7b5ea7;">Menstrual Health</span>
+          <span class="tag-badge" style="background:#f5eef8;color:#7b5ea7;">Leucorrhoea</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- E.D. FORTE -->
+    <div class="product-card scroll-reveal group cursor-pointer" data-category="men" onclick="openModal('ed-forte')">
+      <div class="relative rounded-3xl overflow-hidden mb-5" style="background:#f3eef8;height:300px;">
+        <span class="absolute top-4 left-4 z-10 px-3 py-1 rounded-full text-white text-xs font-semibold" style="background:#6b2d8c;font-size:0.65rem;letter-spacing:0.08em;text-transform:uppercase;">Capsule · 1×14</span>
+        <img class="w-full h-full object-contain object-center group-hover:scale-105 transition-transform duration-500 p-4" src="./ED.Forte.png" alt="E.D. Forte Capsule"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+          <span class="bg-white text-primary rounded-full px-4 py-2 text-xs font-bold tracking-widest uppercase">View Details</span>
+        </div>
+      </div>
+      <div class="space-y-1">
+        <h3 class="font-serif text-xl font-semibold">E.D. Forte------MRP ₹549</h3>
+        <p class="text-on-surface-variant text-sm">Men's Stamina & Vitality · 1×14 Capsules</p>
+        <p class="text-sm text-on-surface-variant leading-relaxed mt-2">Safed Musli, Ashwagandha, Shilajit, Swarna Bhasma, Kaunch Beej — restores strength, boosts energy, improves male vitality and endurance.</p>
+        <div class="flex flex-wrap mt-3 gap-1">
+          <span class="tag-badge" style="background:#f3eef8;color:#6b2d8c;">Male Vitality</span>
+          <span class="tag-badge" style="background:#f3eef8;color:#6b2d8c;">Stamina</span>
+          <span class="tag-badge" style="background:#f3eef8;color:#6b2d8c;">Energy</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     INGREDIENT LIBRARY
+═══════════════════════════════════════════════ -->
+<section id="tradition" class="py-24 max-w-container mx-auto px-4 md:px-16 border-t border-outline-variant/30">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+    <div class="relative rounded-[36px] overflow-hidden ambient-shadow scroll-reveal" style="height:580px;">
+      <img class="w-full h-full object-cover" src="./catlg.png" alt="AshtaSiddhi Herbals — Mortar and Herbs"/>
+      <div class="absolute inset-0" style="background:rgba(46,82,34,0.1);mix-blend-mode:multiply;"></div>
+      <div class="absolute bottom-6 left-6 right-6 glass-card rounded-2xl p-4">
+        <div class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-primary" style="font-variation-settings:'FILL' 1;">science</span>
+          <p class="text-sm font-semibold" style="color:#1c1c18;">Every herb is standardised to active compound concentration, not just weight.</p>
+        </div>
+      </div>
+    </div>
+    <div class="space-y-8 scroll-reveal">
+      <div>
+        <span style="font-size:0.7rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);">The Apothecary</span>
+        <h2 class="font-serif mt-3" style="font-size:2rem;font-weight:600;color:#2e5222;line-height:1.3;">Grown in the Wild.<br/>Perfected by Science.</h2>
+      </div>
+      <div class="space-y-4">
+        <div class="flex gap-5 p-4 rounded-2xl hover:bg-white transition-all duration-300 cursor-pointer">
+          <div class="ingredient-letter">A</div>
+          <div>
+            <h4 class="font-serif text-lg font-semibold mb-1">Ashwagandha <span class="text-on-surface-variant text-sm font-sans font-normal">· Withania somnifera</span></h4>
+            <p class="text-on-surface-variant text-sm leading-relaxed">The "King of Herbs" — an adaptogen that reduces cortisol, enhances stamina, and supports hormonal balance. Used in Manas Calm, E.D. Forte & Jod Sanjivani.</p>
+          </div>
+        </div>
+        <div class="divider-gold"></div>
+        <div class="flex gap-5 p-4 rounded-2xl hover:bg-white transition-all duration-300 cursor-pointer">
+          <div class="ingredient-letter">B</div>
+          <div>
+            <h4 class="font-serif text-lg font-semibold mb-1">Brahmi <span class="text-on-surface-variant text-sm font-sans font-normal">· Bacopa monnieri / Centella asiatica</span></h4>
+            <p class="text-on-surface-variant text-sm leading-relaxed">Premier Medhya Rasayana — enhances memory, cognitive function, and neuroplasticity. Core to Manas Calm formulations.</p>
+          </div>
+        </div>
+        <div class="divider-gold"></div>
+        <div class="flex gap-5 p-4 rounded-2xl hover:bg-white transition-all duration-300 cursor-pointer">
+          <div class="ingredient-letter">G</div>
+          <div>
+            <h4 class="font-serif text-lg font-semibold mb-1">Guggulu <span class="text-on-surface-variant text-sm font-sans font-normal">· Commiphora mukul</span></h4>
+            <p class="text-on-surface-variant text-sm leading-relaxed">Ancient resin revered for joint health, cholesterol management and metabolic support. Core in Uric Ease & Jodcal Gold.</p>
+          </div>
+        </div>
+        <div class="divider-gold"></div>
+        <div class="flex gap-5 p-4 rounded-2xl hover:bg-white transition-all duration-300 cursor-pointer">
+          <div class="ingredient-letter">S</div>
+          <div>
+            <h4 class="font-serif text-lg font-semibold mb-1">Shatavari <span class="text-on-surface-variant text-sm font-sans font-normal">· Asparagus racemosus</span></h4>
+            <p class="text-on-surface-variant text-sm leading-relaxed">Revered for female hormonal balance and reproductive health. Core herb in She Well Plus and Ashta Vriq kidney tonic.</p>
+          </div>
+        </div>
+        <div class="divider-gold"></div>
+        <div class="flex gap-5 p-4 rounded-2xl hover:bg-white transition-all duration-300 cursor-pointer">
+          <div class="ingredient-letter">K</div>
+          <div>
+            <h4 class="font-serif text-lg font-semibold mb-1">Kalmegh <span class="text-on-surface-variant text-sm font-sans font-normal">· Andrographis paniculata</span></h4>
+            <p class="text-on-surface-variant text-sm leading-relaxed">"King of Bitters" — potent liver protector and immune modulator. Key herb in Ashta Liv Syrup for liver disorders.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     BRAND STORY
+═══════════════════════════════════════════════ -->
+<section class="relative py-24 overflow-hidden" style="background:#2e5222;">
+  <div class="absolute top-0 right-0 w-1/2 h-full opacity-[0.06] pointer-events-none overflow-hidden">
+    <img src="./AsT Log.png" alt="" class="w-full h-full object-cover" aria-hidden="true"/>
+  </div>
+  <div class="relative z-10 max-w-container mx-auto px-4 md:px-16">
+    <div class="max-w-3xl mx-auto text-center scroll-reveal">
+      <span style="font-size:0.7rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.5);">Our Heritage</span>
+      <h2 class="font-serif mt-4 text-white" style="font-size:clamp(2rem,4vw,2.8rem);font-weight:700;line-height:1.15;letter-spacing:-0.02em;">
+        Reviving the Sacred Science<br/>of AshtaSiddhi.
+      </h2>
+      <div class="w-20 h-px mx-auto my-8" style="background:linear-gradient(90deg, transparent, var(--gold), transparent);"></div>
+      <p class="text-white/75 leading-relaxed" style="font-size:1.05rem;">
+        Derived from ancient scriptures, <em>"Ashtasiddhi"</em> represents the eight supreme powers of perfection in Ayurvedic philosophy. Founded in Patiala,Punjab — the spiritual heart of India — our mission is to harness these powers through nature's finest botanicals.
+      </p>
+      <p class="text-white/75 leading-relaxed mt-5" style="font-size:1.05rem;">
+        From our sustainable herb sourcing to our GMP & ISO certified processing facility, every step is an act of devotion to your well-being and our planet's health. <em>"The End is the Beginning"</em><br><br>
+         <centre>अंतः अस्ति प्रारंभः</centre>
+      </p>
+        </p>
+      </p>
+      
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     FAQ
+═══════════════════════════════════════════════ -->
+<section class="py-24 bg-surface-container-low">
+  <div class="max-w-3xl mx-auto px-4 md:px-16">
+    <div class="text-center mb-14 scroll-reveal">
+      <span style="font-size:0.7rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);">FAQ</span>
+      <h2 class="font-serif mt-3" style="font-size:2rem;font-weight:600;color:#2e5222;">Common Questions</h2>
+    </div>
+    <div class="space-y-0 scroll-reveal" id="faq-container">
+      <div class="faq-item border-b py-5 cursor-pointer" onclick="toggleFaq(this)" style="border-color:rgba(200,169,106,0.3);">
+        <div class="flex justify-between items-center">
+          <h4 class="font-sans font-semibold text-on-surface text-base pr-8">Are AshtaSiddhi products safe for long-term use?</h4>
+          <span class="faq-icon material-symbols-outlined text-primary flex-shrink-0" style="font-size:20px;">add</span>
+        </div>
+        <div class="faq-answer"><p class="text-on-surface-variant text-sm leading-relaxed mt-4">Yes. All our formulations use classical Ayurvedic herbs in their natural ratios, with no synthetic additives. They are designed for sustained, long-term use. For specific health conditions, we recommend consulting our in-house Vaidya before starting a regimen.</p></div>
+      </div>
+      <div class="faq-item border-b py-5 cursor-pointer" onclick="toggleFaq(this)" style="border-color:rgba(200,169,106,0.3);">
+        <div class="flex justify-between items-center">
+          <h4 class="font-sans font-semibold text-on-surface text-base pr-8">How do I know which product is right for me?</h4>
+          <span class="faq-icon material-symbols-outlined text-primary flex-shrink-0" style="font-size:20px;">add</span>
+        </div>
+        <div class="faq-answer"><p class="text-on-surface-variant text-sm leading-relaxed mt-4">We offer a free consultation with our certified Ayurvedic physician via phone or WhatsApp. You can also contact us with your health concerns and our team will recommend the most suitable formulation for your needs.</p></div>
+      </div>
+      <div class="faq-item border-b py-5 cursor-pointer" onclick="toggleFaq(this)" style="border-color:rgba(200,169,106,0.3);">
+        <div class="flex justify-between items-center">
+          <h4 class="font-sans font-semibold text-on-surface text-base pr-8">How long before I see results?</h4>
+          <span class="faq-icon material-symbols-outlined text-primary flex-shrink-0" style="font-size:20px;">add</span>
+        </div>
+        <div class="faq-answer"><p class="text-on-surface-variant text-sm leading-relaxed mt-4">Ayurveda works gently and sustainably. Most customers notice significant improvements within 4–6 weeks of consistent use. Acute conditions may show relief sooner (1–2 weeks), while chronic conditions typically require 2–3 months for full results.</p></div>
+      </div>
+      <div class="faq-item border-b py-5 cursor-pointer" onclick="toggleFaq(this)" style="border-color:rgba(200,169,106,0.3);">
+        <div class="flex justify-between items-center">
+          <h4 class="font-sans font-semibold text-on-surface text-base pr-8">Are your products certified and tested?</h4>
+          <span class="faq-icon material-symbols-outlined text-primary flex-shrink-0" style="font-size:20px;">add</span>
+        </div>
+        <div class="faq-answer"><p class="text-on-surface-variant text-sm leading-relaxed mt-4">Absolutely. AshtaSiddhi is GMP & ISO certified. Products undergo third-party testing at NABL-accredited laboratories for heavy metals, microbial contamination, pesticide residues, and active compound concentration. CoA reports are available on request.</p></div>
+      </div>
+      <div class="faq-item py-5 cursor-pointer" onclick="toggleFaq(this)">
+        <div class="flex justify-between items-center">
+          <h4 class="font-sans font-semibold text-on-surface text-base pr-8">Do you offer wholesale / B2B supply?</h4>
+          <span class="faq-icon material-symbols-outlined text-primary flex-shrink-0" style="font-size:20px;">add</span>
+        </div>
+        <div class="faq-answer"><p class="text-on-surface-variant text-sm leading-relaxed mt-4">Yes. We supply to pharmacies, wellness clinics, Ayurvedic practitioners, and distributors across India. Please contact us via email or WhatsApp for bulk pricing, minimum order quantities, and distribution partnership details.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     CONTACT
+═══════════════════════════════════════════════ -->
+<section id="contact" class="py-24 max-w-container mx-auto px-4 md:px-16 scroll-reveal">
+  <div class="rounded-[36px] p-10 md:p-16 relative overflow-hidden" style="background:linear-gradient(135deg, #f0ede4 0%, #e8f2e2 100%);">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+      <!-- LEFT SIDE -->
+      <div>
+        <span style="font-size:0.7rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);">Get In Touch</span>
+        <h2 class="font-serif mt-3 mb-4" style="font-size:1.9rem;font-weight:600;color:#2e5222;">Speak with Our<br/>Ayurvedic Experts</h2>
+        <p class="text-on-surface-variant text-sm leading-relaxed mb-8">Have a health concern or need guidance on our formulations? Our qualified Ayurvedic physicians are available for free consultations. We also welcome wholesale and B2B enquiries.</p>
+
+        <div class="space-y-4">
+
+          <!-- Address -->
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+              <span class="material-symbols-outlined text-primary" style="font-size:18px;">location_on</span>
+            </div>
+            <div>
+              <p class="text-sm font-semibold mb-0.5">Registered Office</p>
+              <p class="text-on-surface-variant text-sm">Thaleshan Road (Haripura), Sangrur — 148001</p>
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+              <span class="material-symbols-outlined text-primary" style="font-size:18px;">mail</span>
+            </div>
+            <div>
+              <p class="text-sm font-semibold mb-0.5">Email</p>
+              <a href="mailto:ashtasiddhiherbals@gmail.com"
+                 class="text-on-surface-variant text-sm hover:text-primary transition-colors"
+                 style="text-decoration:none;">
+                 ashtasiddhiherbals@gmail.com
+              </a>
+            </div>
+          </div>
+
+          <!-- Instagram -->
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                   class="text-primary" style="width:18px;height:18px;">
+                <path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.97.24 2.43.4.61.24 1.05.52 1.51.98.46.46.74.9.98 1.51.16.46.35 1.26.4 2.43.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.24 1.97-.4 2.43-.24.61-.52 1.05-.98 1.51-.46.46-.9.74-1.51.98-.46.16-1.26.35-2.43.4-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.97-.24-2.43-.4-.61-.24-1.05-.52-1.51-.98-.46-.46-.74-.9-.98-1.51-.16-.46-.35-1.26-.4-2.43-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.24-1.97.4-2.43.24-.61.52-1.05.98-1.51.46-.46.9-.74 1.51-.98.46-.16 1.26-.35 2.43-.4C8.42 2.17 8.8 2.16 12 2.16zm0 1.62c-3.14 0-3.5.01-4.74.07-.96.04-1.48.21-1.82.34-.46.18-.78.39-1.13.74-.35.35-.56.67-.74 1.13-.13.34-.3.86-.34 1.82-.06 1.24-.07 1.6-.07 4.74s.01 3.5.07 4.74c.04.96.21 1.48.34 1.82.18.46.39.78.74 1.13.35.35.67.56 1.13.74.34.13.86.3 1.82.34 1.24.06 1.6.07 4.74.07s3.5-.01 4.74-.07c.96-.04 1.48-.21 1.82-.34.46-.18.78-.39 1.13-.74.35-.35.56-.67.74-1.13.13-.34.3-.86.34-1.82.06-1.24.07-1.6.07-4.74s-.01-3.5-.07-4.74c-.04-.96-.21-1.48-.34-1.82-.18-.46-.39-.78-.74-1.13-.35-.35-.67-.56-1.13-.74-.34-.13-.86-.3-1.82-.34-1.24-.06-1.6-.07-4.74-.07z"/>
+                <path d="M12 6.87a5.13 5.13 0 1 0 0 10.26 5.13 5.13 0 0 0 0-10.26zm0 8.46a3.33 3.33 0 1 1 0-6.66 3.33 3.33 0 0 1 0 6.66z"/>
+                <circle cx="17.34" cy="6.66" r="1.2"/>
+              </svg>
+            </div>
+            <div>
+              <p class="text-sm font-semibold mb-0.5">Instagram</p>
+              <a href="https://instagram.com/ashtasiddhi.herbals"
+                 target="_blank"
+                 class="text-on-surface-variant text-sm hover:text-primary transition-colors"
+                 style="text-decoration:none;">
+                 @ashtasiddhi.herbals
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- RIGHT SIDE FORM -->
+      <div class="space-y-5">
+        <div class="bg-white rounded-2xl p-6 ambient-shadow">
+          <h3 class="font-serif text-lg font-semibold mb-4 text-primary">Send an Enquiry</h3>
+          <form id="contact-form" class="space-y-3">
+            <input type="hidden" name="access_key" value="a9509563-617e-4926-8968-8d9f9f34c022">
+            <input type="hidden" name="subject" value="New Enquiry — AshtaSiddhi Herbals Website">
+            <input type="text" name="name" placeholder="Your Name" required class="w-full px-4 py-3 rounded-lg border text-sm outline-none focus:border-primary transition-colors" style="border-color:#c3c9bb;font-family:'Plus Jakarta Sans',sans-serif;"/>
+            <input type="tel" name="phone" placeholder="Phone Number" required class="w-full px-4 py-3 rounded-lg border text-sm outline-none focus:border-primary transition-colors" style="border-color:#c3c9bb;font-family:'Plus Jakarta Sans',sans-serif;"/>
+            <input type="email" name="email" placeholder="Email Address" required class="w-full px-4 py-3 rounded-lg border text-sm outline-none focus:border-primary transition-colors" style="border-color:#c3c9bb;font-family:'Plus Jakarta Sans',sans-serif;"/>
+            <textarea rows="3" name="message" placeholder="Your health concern or enquiry..." class="w-full px-4 py-3 rounded-lg border text-sm outline-none focus:border-primary transition-colors resize-none" style="border-color:#c3c9bb;font-family:'Plus Jakarta Sans',sans-serif;"></textarea>
+            <button type="submit" id="enquiry-submit-btn" class="btn-primary w-full text-center">Send Enquiry</button>
+            <p id="enquiry-status"></p>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+        <!-- Certifications -->
+        <div class="flex gap-4 justify-center">
+          <div class="bg-white rounded-xl px-5 py-3 ambient-shadow text-center">
+            <div class="text-xs font-bold text-primary tracking-wider uppercase">GMP</div>
+            <div class="text-xs text-on-surface-variant mt-0.5">Certified</div>
+          </div>
+          <div class="bg-white rounded-xl px-5 py-3 ambient-shadow text-center">
+            <div class="text-xs font-bold text-primary tracking-wider uppercase">ISO</div>
+            <div class="text-xs text-on-surface-variant mt-0.5">Certified</div>
+          </div>
+          <div class="bg-white rounded-xl px-5 py-3 ambient-shadow text-center">
+            <div class="text-xs font-bold text-primary tracking-wider uppercase">AYUSH</div>
+            <div class="text-xs text-on-surface-variant mt-0.5">Approved</div>
+          </div>
+          <div class="bg-white rounded-xl px-5 py-3 ambient-shadow text-center">
+            <div class="text-xs font-bold text-primary tracking-wider uppercase">Herbal</div>
+            <div class="text-xs text-on-surface-variant mt-0.5">Natural</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════════ -->
+<footer class="bg-surface-container-low border-t" style="border-color:rgba(195,201,187,0.5);">
+  <div class="max-w-container mx-auto px-4 md:px-16 py-16 grid grid-cols-1 md:grid-cols-4 gap-10">
+    <div class="space-y-5">
+      <a href="#"><img src="./AsT Log.png" alt="AshtaSiddhi Herbals" class="h-10 w-auto object-contain" style="max-width:140px;"/></a>
+      <p class="text-on-surface-variant text-sm leading-relaxed">Ancient wisdom for the modern soul. Premium, ethically sourced Ayurvedic formulations — made with devotion. GMP & ISO Certified.</p>
+      <div class="flex gap-3">
+        <a href="#" class="w-9 h-9 rounded-full border flex items-center justify-center hover:bg-primary hover:text-white hover:border-primary transition-all text-on-surface-variant" style="border-color:#c3c9bb;" aria-label="Instagram">
+          <span class="material-symbols-outlined" style="font-size:16px;">photo_camera</span>
+        </a>
+        <a href="#" class="w-9 h-9 rounded-full border flex items-center justify-center hover:bg-primary hover:text-white hover:border-primary transition-all text-on-surface-variant" style="border-color:#c3c9bb;" aria-label="Facebook">
+          <span class="material-symbols-outlined" style="font-size:16px;">thumb_up</span>
+        </a>
+        <a href="https://wa.me/912532348000" class="w-9 h-9 rounded-full border flex items-center justify-center hover:bg-primary hover:text-white hover:border-primary transition-all text-on-surface-variant" style="border-color:#c3c9bb;" aria-label="WhatsApp">
+          <span class="material-symbols-outlined" style="font-size:16px;">chat</span>
+        </a>
+      </div>
+    </div>
+    <div class="space-y-5">
+      <h4 style="font-size:0.7rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:#2e5222;">Products</h4>
+      <ul class="space-y-3">
+        <li><a href="#" onclick="openModal('manas-calm-syrup')" class="text-on-surface-variant text-sm hover:text-secondary transition-colors" style="text-decoration:none;">Manas Calm — Mental Wellness</a></li>
+        <li><a href="#" onclick="openModal('jod-sanjivani')" class="text-on-surface-variant text-sm hover:text-secondary transition-colors" style="text-decoration:none;">Jod Sanjivani — Joint Care</a></li>
+        <li><a href="#" onclick="openModal('jodcal-gold')" class="text-on-surface-variant text-sm hover:text-secondary transition-colors" style="text-decoration:none;">Jodcal Gold — Bone Health</a></li>
+        <li><a href="#" onclick="openModal('uric-ease')" class="text-on-surface-variant text-sm hover:text-secondary transition-colors" style="text-decoration:none;">Uric Ease — Uric Acid Control</a></li>
+        <li><a href="#" onclick="openModal('curpi-q')" class="text-on-surface-variant text-sm hover:text-secondary transition-colors" style="text-decoration:none;">Curpi Q — Immunity Booster</a></li>
+        <li><a href="#" onclick="openModal('ashta-liv-syrup')" class="text-on-surface-variant text-sm hover:text-secondary transition-colors" style="text-decoration:none;">Ashta Liv — Liver Care</a></li>
+        <li><a href="#" onclick="openModal('ashta-vriq')" class="text-on-surface-variant text-sm hover:text-secondary transition-colors" style="text-decoration:none;">Ashta Vriq — Kidney Health</a></li>
+        <li><a href="#" onclick="openModal('she-well-plus')" class="text-on-surface-variant text-sm hover:text-secondary transition-colors" style="text-decoration:none;">She Well Plus — Women's Health</a></li>
+      </ul>
+    </div>
+    <div class="space-y-5">
+      <h4 style="font-size:0.7rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:#2e5222;">Company</h4>
+      <ul class="space-y-3">
+        <li><a href="#about" class="text-on-surface-variant text-sm hover:text-secondary transition-colors" style="text-decoration:none;">About Us</a></li>
+        <li><a href="#tradition" class="text-on-surface-variant text-sm hover:text-secondary transition-colors" style="text-decoration:none;">Ingredient Library</a></li>
+        <li><a href="#" class="text-on-surface-variant text-sm hover:text-secondary transition-colors" style="text-decoration:none;">GMP & ISO Certification</a></li>
+        <li><a href="#" class="text-on-surface-variant text-sm hover:text-secondary transition-colors" style="text-decoration:none;">Wholesale / B2B</a></li>
+        <li><a href="#" class="text-on-surface-variant text-sm hover:text-secondary transition-colors" style="text-decoration:none;">Privacy Policy</a></li>
+        <li><a href="#faq" class="text-on-surface-variant text-sm hover:text-secondary transition-colors" style="text-decoration:none;">FAQ</a></li>
+      </ul>
+    </div>
+    <div class="space-y-5">
+      <h4 style="font-size:0.7rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:#2e5222;">Get in Touch</h4>
+      <div class="space-y-3">
+        <div class="flex items-start gap-3">
+          <span class="material-symbols-outlined text-primary mt-0.5" style="font-size:16px;">location_on</span>
+          <p class="text-on-surface-variant text-sm">Thaleshan Road (Haripura),<br/>Sangrur — 148001</p>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-primary" style="font-size:16px;"></span>
+          <a href="tel:+912532348000" class="text-on-surface-variant text-sm hover:text-primary transition-colors" style="text-decoration:none;"></a>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-primary" style="font-size:16px;">mail</span>
+          <a href="mailto:ashtasiddhiherbals@gmail.com" class="text-on-surface-variant text-sm hover:text-primary transition-colors" style="text-decoration:none;">ashtasiddhiherbals@gmail.com</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-primary" style="font-size:16px;font-variation-settings:'FILL' 1;"></span>
+          <a href="https://wa.me/912532348000" class="text-on-surface-variant text-sm hover:text-primary transition-colors" style="text-decoration:none;"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="border-t max-w-container mx-auto px-4 md:px-16 py-6 flex flex-col md:flex-row justify-between items-center gap-4" style="border-color:rgba(195,201,187,0.35);">
+    <p style="font-size:0.65rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#73796d;">© 2026 AshtaSiddhi Herbals Pvt. Ltd. · The Source of Life · GMP & ISO Certified</p>
+    <p style="font-size:0.65rem;color:#73796d;">For enquiries: ashtasiddhiherbals@gmail.com</p>
+  </div>
+</footer>
+
+
+<!-- Mobile Bottom Nav -->
+<nav class="fixed bottom-0 left-0 w-full z-50 md:hidden flex justify-around items-center px-2 py-2"
+     style="background:rgba(255,255,255,0.95);backdrop-filter:blur(20px);border-top:0.5px solid rgba(195,201,187,0.4);">
+  <a href="#products" class="flex flex-col items-center gap-1 px-3 py-1 rounded-full text-primary" style="background:rgba(46,82,34,0.1);text-decoration:none;">
+    <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;font-size:22px;">spa</span>
+    <span style="font-size:0.6rem;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;">Products</span>
+  </a>
+  <a href="#solutions" class="flex flex-col items-center gap-1 px-3 py-1 text-on-surface-variant" style="text-decoration:none;">
+    <span class="material-symbols-outlined" style="font-size:22px;">health_and_safety</span>
+    <span style="font-size:0.6rem;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;">Solutions</span>
+  </a>
+  <a href="#tradition" class="flex flex-col items-center gap-1 px-3 py-1 text-on-surface-variant" style="text-decoration:none;">
+    <span class="material-symbols-outlined" style="font-size:22px;">forest</span>
+    <span style="font-size:0.6rem;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;">Herbs</span>
+  </a>
+  <a href="#contact" class="flex flex-col items-center gap-1 px-3 py-1 text-on-surface-variant" style="text-decoration:none;">
+    <span class="material-symbols-outlined" style="font-size:22px;">call</span>
+    <span style="font-size:0.6rem;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;">Contact</span>
+  </a>
+</nav>
+
+
+<!-- ═══════════════════════════════════════════════
+     PRODUCT MODALS DATA + OVERLAY
+═══════════════════════════════════════════════ -->
+<div id="modal-overlay" class="modal-overlay" onclick="closeModalOnOverlay(event)">
+  <div class="modal-box" id="modal-box">
+    <button onclick="closeModal()" class="absolute top-5 right-5 w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center hover:bg-primary hover:text-white transition-all">
+      <span class="material-symbols-outlined" style="font-size:20px;">close</span>
+    </button>
+    <div id="modal-content"></div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════
+     JAVASCRIPT
+═══════════════════════════════════════════════ -->
+<script>
+  // ── Nav scroll shrink ──
+  window.addEventListener('scroll', () => {
+    const nav = document.getElementById('main-nav');
+    nav.style.boxShadow = window.scrollY > 80 ? '0 2px 20px rgba(46,82,34,0.08)' : 'none';
+  });
+
+  // ── Scroll Reveal ──
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+  }, { threshold: 0.07 });
+  document.querySelectorAll('.scroll-reveal').forEach(el => revealObserver.observe(el));
+
+  // ── Mobile menu ──
+  document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+  });
+  function closeMobileMenu() { document.getElementById('mobile-menu').classList.add('hidden'); }
+
+  // ── Active nav highlight ──
+  const sections = document.querySelectorAll('section[id]');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 120) current = s.id; });
+    document.querySelectorAll('.nav-link').forEach(a => {
+      a.classList.remove('active');
+      if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+    });
+  });
+
+  // ── FAQ ──
+  function toggleFaq(item) {
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+
+  // ── Product Filter ──
+  function filterProducts(category, btn) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active-filter'));
+    btn.classList.add('active-filter');
+    document.querySelectorAll('.product-card').forEach(card => {
+      if (category === 'all' || card.dataset.category === category) {
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  // ── Enquiry form (Web3Forms) ──
+  const enquiryForm = document.getElementById('contact-form');
+  const enquiryStatus = document.getElementById('enquiry-status');
+  const enquirySubmitBtn = document.getElementById('enquiry-submit-btn');
+
+  function showEnquiryStatus(message, type) {
+    enquiryStatus.textContent = message;
+    enquiryStatus.className = 'show ' + type;
+  }
+
+  enquiryForm.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    enquirySubmitBtn.disabled = true;
+    enquirySubmitBtn.textContent = 'Sending...';
+
+    const formData = new FormData(enquiryForm);
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        showEnquiryStatus('Thank you! Your enquiry has been sent. Our team will contact you within 24 hours.', 'success');
+        enquiryForm.reset();
+      } else {
+        showEnquiryStatus('Sorry, something went wrong: ' + (data.message || 'please try again.'), 'error');
+        console.error('Web3Forms error:', data);
+      }
+    } catch (error) {
+      showEnquiryStatus('Network error. Please try again or WhatsApp us directly.', 'error');
+      console.error('Web3Forms error:', error);
+    } finally {
+      enquirySubmitBtn.disabled = false;
+      enquirySubmitBtn.textContent = 'Send Enquiry';
+    }
+  });
+
+  // ── Product Modal Data ──
+  const products = {
+    'manas-calm-syrup': {
+      name: 'Manas Calm Syrup',
+      tagline: 'Natural Calm for a Balanced Mind',
+      type: 'Ayurvedic Syrup · 200ml · Sugar Free',
+      color: '#f0edf8',
+      img: 'Manas Calm Syrp.png',
+      description: 'A powerful herbal tranquilizer that calms the nervous system naturally, promotes sound and restful sleep, improves mental clarity and concentration. Non-addictive and effective stress reliever.',
+      composition_label: 'Each 5 ml contains',
+      composition: [
+        ['Ashwagandha (Withania somaifera)', '400 mg'],
+        ['Khurasani azwain (Hyoscyamus niger)', '350 mg'],
+        ['Shankhpushpi (Convolvulus pluricalis)', '300 mg'],
+        ['Jatamansi (Nardostachys)', '450 mg'],
+        ['Tagar (Valeriana wallichi)', '250 mg'],
+        ['Amla (Emblica officinalis)', '350 mg'],
+        ['Vacha (Acorus calamus)', '200 mg'],
+        ['Brahmi (Centella siatica)', '200 mg'],
+        ['Sarpgandha (Rauwolfa serpentia)', '100 mg'],
+        ['Flavoured Juice base', 'q.s.'],
+      ],
+      benefits: ['Helps calm the nervous system naturally','Promotes sound and restful sleep','Improves mental clarity & concentration','Helps manage emotional imbalance','Acts as a natural tranquilizer without dependency'],
+      indications: ['Stress & Anxiety Disorders','Mental Tension & Nervousness','Insomnia / Disturbed Sleep','Irritability & Restlessness','Depression','Mental Fatigue & Burnout'],
+    },
+    'manas-calm-cap': {
+      name: 'Manas Calm Capsule',
+      tagline: 'For Mental Calm, Stress Control & Emotional Balance',
+      type: 'Ayurvedic Capsule · 1×10×10 Capsules',
+      color: '#f0edf8',
+      img: './Manas Calm Cap.png',
+      description: 'Designed for mental calm, stress control and emotional balance. Non-addictive and completely safe. Reduces mental stress and anxiety, promotes calmness and improves sleep quality without habit formation.',
+      composition_label: 'Each 500 mg capsule contains',
+      composition: [
+        ['Shankhpushpi', '75 mg'],
+        ['Khurasni Ajwain', '30 mg'],
+        ['Sarpagandha', '30 mg'],
+        ['Brahmi', '60 mg'],
+        ['Arjun Chhal', '30 mg'],
+        ['Pippali', '25 mg'],
+        ['Tagar', '45 mg'],
+        ['Jatamansi', '35 mg'],
+        ['Jeevanti', '40 mg'],
+        ['Malkangani', '45 mg'],
+        ['Vach', '20 mg'],
+        ['Ashwangandha', '40 mg'],
+        ['Tulsi', '25 mg'],
+      ],
+      benefits: ['Helps reduce mental stress and anxiety','Promotes calmness and emotional stability','Improves sleep quality without habit formation','Enhances focus, concentration & mental clarity','Useful in stress-related weakness'],
+      indications: ['Stress & Mental Fatigue','Anxiety & Restlessness','Irritability & Nervous Tension','Sleep Disturbances'],
+    },
+    'jod-sanjivani': {
+      name: 'Jod Sanjivani Syrup',
+      tagline: 'Get Relief From Body Pain',
+      type: 'Ayurvedic Syrup · 300ml · Sugar Free',
+      color: '#f5f0e2',
+      img: './Jod Sanjevani.png',
+      description: 'A natural Ayurvedic syrup with 17+ herbs that effectively relieves acute and chronic body pain, joint inflammation and stiffness, muscle strain and sprain. Improves mobility and flexibility. Sugar Free formula safe for diabetics.',
+      composition_label: 'Each 10 ml contains',
+      composition: [
+        ['Haldi (Curcuma longa) Rz.', '150 mg'],
+        ['Nirgundi (Vitex negundo) Lf.', '200 mg'],
+        ['Shallaki (Boswellia serrata) Gum', '150 mg'],
+        ['Shilajeet Sudh (Asphaltum punjabinum) Sd.', '50 mg'],
+        ['Sounth (Zingiber officinale) Rz.', '100 mg'],
+        ['Suranjan (Colchicum luteum) Rz.', '150 mg'],
+        ['Trifla', '50 mg'],
+        ['Rasna (Pluchea lanceolata) Lf.', '50 mg'],
+        ['Punarnava (Boerhaavia diffusa) Rt.', '50 mg'],
+        ['Gokhru (Tribulus terrestris) Ft.', '50 mg'],
+        ['Sudh Guggal (Commiphora wightii) Ed.', '50 mg'],
+        ['Ashwagandha (Withania somnifera) Rt.', '100 mg'],
+        ['Pippali mool (Piper longum) Ft.', '50 mg'],
+        ['Malkangni (Celastrus paniculatus) Sd.', '50 mg'],
+        ['Kaunch Beej (Mucuna pruriens) Sd.', '50 mg'],
+        ['Hadjod (Cissus quadrangularis) St.', '150 mg'],
+      ],
+      benefits: ['Helps relieve acute and chronic body pain','Effective in joint inflammation and stiffness','Supports relief in muscle strain and sprain','Useful in cervical & lumbar pain','Helps improve mobility and flexibility','Beneficial in arthritis-related discomfort'],
+      indications: ['Knee & Joint Pain','Shoulder Pain','Neck Pain / Back Pain','Muscle Pain & Stiffness','Arthritis','Sciatica'],
+    },
+    'jodcal-gold': {
+      name: 'Jodcal Gold Capsules',
+      tagline: 'Advanced Ayurvedic Formula for Joint & Bone Health',
+      type: 'Ayurvedic Capsule · 10×1×3 Capsules · With Gold & Calcium',
+      color: '#f9f3e0',
+      img: './Jodcal.png',
+      description: 'An advanced Ayurvedic herbal composition with Gold (Swarna Bhasma) and Calcium (Mukta Shukti) for superior joint and bone health. Supports mobility in arthritis and joint disorders, improves muscle strength and flexibility.',
+      composition_label: 'Each Capsule contains',
+      composition: [
+        ['Kesar (Saffron) Flower', '1 mg'],
+        ['Swam Bhasma (Aurum) Bhasma', '0.50 mg'],
+        ['Karpur (Camphora) Ext.', '0.50 mg'],
+        ['Surinjan (Colchicum Luteum) Ext.', '40 mg'],
+        ['Behmanbarin (Withania Somnifera) Ext.', '40 mg'],
+        ['Nirgundi (Vitex Negundo) Ext.', '40 mg'],
+        ['Haridra (Curcuma Longa) Rhizome', '40 mg'],
+        ['Kasbussini (Smilax China) Wood', '40 mg'],
+        ['Hadjod (Cissus Quadrangularis) Ext.', '48 mg'],
+        ['Shudh Shilajit (Asphaltum) Ext', '50 mg'],
+        ['Gugle Salai (Boswellia Serreta) Gum', '50 mg'],
+        ['Arjuna (Terminalia Arjuna) Bark', '50 mg'],
+        ['Mukta Shukti (Oyster Shell)', '50 mg'],
+        ['Lakshadi Gugulu (Gum)', '50 mg'],
+      ],
+      benefits: ['Supports mobility in arthritis & joint disorders','Helps relieve joint pain & stiffness','Supports healthy bones & joints','Improves muscle strength & flexibility','Helps reduce inflammation & swelling'],
+      indications: ['Joint Pain','Arthritis','Back & Knee Pain','Poor Mobility'],
+    },
+    'uric-ease': {
+      name: 'Uric Ease Capsule',
+      tagline: 'Control Uric Acid, Control Your Life',
+      type: 'Ayurvedic Capsule · 1×10×10 Capsules',
+      color: '#ffeef0',
+      img: './uric ease.png',
+      description: 'Natural solution for uric acid and gout care. Decreases elevated levels of uric acid, improves metabolism and digestion, relieves tenderness in affected joints. Proactive gout prevention through Ayurvedic herbs.',
+      composition_label: 'Each Capsule contains',
+      composition: [
+        ['Kaishor Guggal', '225 mg'],
+        ['Gokhru (Tribulus terrestris) Ft.', '25 mg'],
+        ['Punarnava (Boerhaavia diffusa) Rt.', '25 mg'],
+        ['Haldi (Curcuma longa) Rz.', '25 mg'],
+        ['Nirgundi (Vitex negundo) Lf.', '25 mg'],
+        ['Rasna Patra (Pluchea lanceolata) Lf.', '25 mg'],
+        ['Shallaki (Boswellia serrata) Gum', '25 mg'],
+        ['Suranjan (Colchicum luteum) St.', '25 mg'],
+        ['Malkagni (Celastrus paniculatus) Sd.', '25 mg'],
+        ['Hadjod (Cissus qudrangularis) St.', '25 mg'],
+        ['Sounth (Zingiber officinale) Rz.', '25 mg'],
+        ['Dalchini (Cinnamomum zeylanicum) Bk.', '25 mg'],
+      ],
+      benefits: ['Decreases elevated levels of uric acid','Improves Metabolism & Digestion','Relieves Tenderness in Affected Joints','Anti-inflammatory & Analgesic','Controls Uric Acid Levels','Reduces Swelling'],
+      indications: ['Reduces Hyper Uricemia','Gouty Arthritis','Uric Acid Control','Joint Swelling & Tenderness'],
+    },
+    'curpi-q': {
+      name: 'Curpi Q Capsule',
+      tagline: "Fight Inflammation, Boost Immunity Naturally — Nature's Golden Glow",
+      type: 'Ayurvedic Herbal Capsule · 20 Capsules',
+      color: '#fef9ec',
+      img: './Curpi Q.png',
+      description: 'A powerful Curcumin-Piperine formulation that helps reduce acute and chronic inflammation, enhances the body\'s natural immune response, and helps maintain overall health, vitality and wellness in daily life.',
+      composition_label: 'Each 500mg Capsule Contains',
+      composition: [
+        ['Turmeric Extract (Curcuma Longa)', '475 mg'],
+        ['Piperine Extract', '25 mg'],
+        ['Excipients', 'q.s.'],
+      ],
+      benefits: ['Helps in reducing acute and chronic inflammation','Enhances body\'s natural immune response','Helps maintain overall health, vitality and wellness','Useful in managing body pain, musculoskeletal discomfort','Antioxidant — protects cells from oxidative stress'],
+      indications: ['Joint Pain & Inflammation','Low Immunity','Post-illness Weakness','Cold, Cough & Fever'],
+    },
+    'ashta-liv-syrup': {
+      name: 'Ashta Liv Syrup',
+      tagline: 'Natural Care of Liver Disorders',
+      type: 'Natural Liver Syrup · 200ml',
+      color: '#e8f2e2',
+      img: './Asstha liv.png',
+      description: 'A well-balanced combination of scientifically researched medicinal herbs which provide protective action to the liver. Protects and regenerates liver cells, improves liver function tests (SGOT, SGPT), enhances appetite and supports detoxification.',
+      composition_label: 'Each 10 ml contains extracts derived from',
+      composition: [
+        ['Bhringraj Pl. (Eclipta alba)', '400 mg'],
+        ['Bhumiamla Pl. (Phyllanthus niruri)', '400 mg'],
+        ['Kalmegh Pl. (Andrographis paniculata)', '250 mg'],
+        ['Punernava Rt. (Boerhavia diffusa)', '250 mg'],
+        ['Makoye Pl. (Solanum nigrum)', '250 mg'],
+        ['Sarfonka Pl. (Tephrosa purpurea)', '150 mg'],
+        ['Rohitak Bk. (Techoma undulata)', '150 mg'],
+        ['Kasni Rt. (Cichorium intybus)', '150 mg'],
+        ['Amla Fr. (Phyllanthus embelica)', '150 mg'],
+        ['Harar Fr. (Terminalis chebula)', '110 mg'],
+        ['Kutki Rt. (Picrorhiza kurroea)', '100 mg'],
+        ['Rewand Rt. (Rheum emodi)', '100 mg'],
+        ['Daruhaldi Rt. (Berberis aristata)', '100 mg'],
+        ['Kumari Lf. (Aloe vera)', '100 mg'],
+        ['Giloy St. (Tinospora cordifolia)', '100 mg'],
+      ],
+      benefits: ['Protects and regenerates liver cells','Improves liver function tests (SGOT, SGPT)','Enhances appetite and digestion','Supports detoxification of the liver','Prevents fatty infiltration of the liver'],
+      indications: ['Fatty Liver','Hepatitis','Alcohol-induced liver disorders','Loss of appetite','Indigestion & Dyspepsia'],
+    },
+    'ashta-liv-ds': {
+      name: 'AshtaLiv DS',
+      tagline: 'Natural Liver Capsule — Double Strength',
+      type: 'Natural Liver Capsule · 30 Capsules · GMP & ISO Certified',
+      color: '#eef4e8',
+      img: './Astha liv ds.png',
+      description: 'Double-strength liver care capsules with Bhumyamalaki, Kutki and Kalmegh. Supports liver detoxification, promotes healthy liver function, and protects from environmental toxins and alcohol damage.',
+      composition_label: 'Key Ingredients',
+      composition: [
+        ['Bhumyamalaki (Phyllanthus niruri)', 'Primary'],
+        ['Kutki (Picrorhiza kurroea)', 'Primary'],
+        ['Kalmegh (Andrographis paniculata)', 'Primary'],
+        ['Punernava (Boerhavia diffusa)', 'Support'],
+        ['Giloy (Tinospora cordifolia)', 'Support'],
+      ],
+      benefits: ['Supports liver detoxification','Promotes healthy liver function','Protects liver from toxins','Improves metabolism and digestion','GMP & ISO Certified formulation'],
+      indications: ['Liver Disorders','Fatty Liver','Hepatitis','Toxin Exposure','Alcohol-induced liver damage'],
+    },
+    'ashta-vriq': {
+      name: 'Ashta Vriq Syrup',
+      tagline: 'Natural Support for Healthy Kidneys',
+      type: 'Natural Kidney Function Tonic · 200ml · Sugar Free',
+      color: '#e0f4f0',
+      img: './Astha Virq.png',
+      description: 'A natural Ayurvedic kidney tonic that supports healthy kidney function, helps in natural detoxification, reduces burning during urination, supports normal urine flow, and maintains urinary tract health.',
+      composition_label: 'Each 10 ml contains',
+      composition: [
+        ['Varun Chhal (Cratava nurvala) Bk.', '300 mg'],
+        ['Punernava (Boerhaavia diffusa) Rt.', '300 mg'],
+        ['Yashtimadhu (Glycyrrhiza glabra) Rz.', '300 mg'],
+        ['Gokhshru (Tribulus terrestris) Ft.', '300 mg'],
+        ['Ashwaganda (Withania somnifera) Rt.', '200 mg'],
+        ['Yavkshar', '300 mg'],
+        ['Kulth Daal (Vigna unauiculata) Ds.', '200 mg'],
+        ['Shatavari (Asparagus racemosus) Rt.', '50 mg'],
+        ['Shilajit Shudh (Asphaltum Punjabinum) Et.', '50 mg'],
+        ['Sajji Kshar', '50 mg'],
+        ['Chandan (Pterocarpus santalinus) Wd.', '50 mg'],
+        ['Nagarmotha (Cyperus rotundus) Rz.', '50 mg'],
+        ['Hajrul Yashood (A.S.S.)', '50 mg'],
+        ['Makoy (Solanum nigrum) Ft.', '200 mg'],
+        ['Flavoured syrup base', 'q.s.'],
+      ],
+      benefits: ['Supports healthy kidney function','Helps in natural detoxification','Reduces burning during urination','Supports normal urine flow','Maintains urinary tract health'],
+      indications: ['Urinary Discomfort','Burning Micturition','Frequent Urination','General Kidney Weakness'],
+    },
+    'ashta-kas': {
+      name: 'Ashta Kas Cough Syrup',
+      tagline: 'Herbal Cough Syrup Honey Based',
+      type: 'Ayurvedic Cough Syrup · 100ml · Honey Based',
+      color: '#fff5e0',
+      img: './Astha Kas.png',
+      description: 'An Ayurvedic proprietary medicine for effective cough relief. Honey-based formula that relieves cough, soothes throat irritation, helps loosen and expel mucus, and supports healthy lung and bronchial function.',
+      composition_label: 'Each 10ml contains ext derived from',
+      composition: [
+        ['Apamarg (Achyranthes aspera) Plant', '500 mg'],
+        ['Kantakari (Solanum xanthocarpum) Plant', '500 mg'],
+        ['Vasa (Adhatoda vasica) Plant', '500 mg'],
+        ['Baheda (Terminalia belerica) Fruit', '260 mg'],
+        ['Pippali (Piper longum) Fruit', '200 mg'],
+        ['Haridra (Curcuma longa) Rhizome', '200 mg'],
+        ['Tankan (Sodii biboras) Salt', '80 mg'],
+        ['Sonth (Zingiber officinale) Rhizome', '80 mg'],
+        ['Kattha (Acacia catechu) Extract', '80 mg'],
+        ['Nosadar (Ammonium chloride) Salt', '40 mg'],
+        ['Pudina satva (Menthol) Leaves', '7.5 mg'],
+        ['Loung oil (Syzygium aromaticum) Bud', '3 mg'],
+        ['Flavoured Syrupy base', 'q.s.'],
+      ],
+      benefits: ['Relieves cough and throat irritation','Helps loosen and expel mucus','Reduces chest congestion','Soothes inflamed respiratory tract','Decreases frequency and severity of coughing','Supports healthy lung and bronchial function'],
+      indications: ['Dry Cough','Chronic Cough','Smoker\'s Cough','Bronchitis','Allergic Cough'],
+    },
+    'sito-sat': {
+      name: 'SitoSat Cough Churna',
+      tagline: 'Complete Herbal Solution for Throat Comfort & Cough Relief',
+      type: 'Ayurvedic Churna · 50gm',
+      color: '#e0f5f0',
+      img: './Sito sol.png',
+      description: 'An Ayurvedic churna that soothes throat irritation, provides relief in dry and productive cough, reduces throat inflammation, helps clear mucus naturally, and gives instant cooling and soothing effect.',
+      composition_label: 'Each 3gm contains',
+      composition: [
+        ['Sita Mishri', '1.5 gm'],
+        ['Mulethi', '0.40 mg'],
+        ['Lavang', '0.40 mg'],
+        ['Pippal magh', '0.40 mg'],
+        ['Elaichi choti', '0.20 gm'],
+        ['Dalchini', '0.10 mg'],
+      ],
+      benefits: ['Soothes throat irritation','Provides relief in dry & productive cough','Reduces throat inflammation','Helps clear mucus naturally','Supports respiratory health','Gives instant cooling & soothing effect'],
+      indications: ['Dry Cough','Productive Cough','Throat Irritation','Hoarseness of Voice','Sore Throat','Throat Dryness'],
+    },
+    'she-well-plus': {
+      name: 'She Well Plus',
+      tagline: 'Daily Wellness Support for Women — Her Health. Her Power.',
+      type: 'Herbal Uterine Capsule · 1×10×10 Capsules',
+      color: '#f5eef8',
+      img: './She well plus.png',
+      description: 'A natural support therapy for leucorrhoea and overall women\'s health. Helps maintain overall women\'s health and wellness, supports hormonal balance, helps manage menstrual irregularities, and improves energy, strength and vitality.',
+      composition_label: 'Composition — each 500 mg Contains',
+      composition: [
+        ['Yashtimadhu (Glycyrrhiza)', '30 mg'],
+        ['Piplamool (Piper longum)', '20 mg'],
+        ['Mochak (Moringa oleifera)', '50 mg'],
+        ['Supari (Areca catechu)', '20 mg'],
+        ['Nagkesar (Mesua ferrra)', '20 mg'],
+        ['Ashok Chhal (Saraca asoca)', '20 mg'],
+        ['Jatamansi (Dashamoola)', '50 mg'],
+        ['Tripathi (Nardostachys jatamansi)', '20 mg'],
+        ['Shatavari (Curcuma parkasha)', '50 mg'],
+        ['Anantmool (Santanum album)', '30 mg'],
+        ['Chandan (Mucuna prureins)', '30 mg'],
+        ['Kaunch Beej (Withania somnifera)', '30 mg'],
+        ['Ashwagandha (Tribulus)', '50 mg'],
+        ['Gokhru (Simplocus racemosa)', '40 mg'],
+        ['Lodhra (Symplocos)', '40 mg'],
+      ],
+      benefits: ['Helps maintain overall women\'s health & wellness','Supports hormonal balance','Helps manage menstrual irregularities','Reduces weakness, fatigue & stress','Improves energy, strength & vitality'],
+      indications: ['Hormonal Imbalance','Menstrual Irregularities','General Weakness & Fatigue','Reduced Energy & Vitality','Leucorrhoea'],
+    },
+    'ed-forte': {
+      name: 'E.D. Forte Capsule',
+      tagline: 'Restore Strength. Regain Confidence.',
+      type: 'Ayurvedic Capsule · 1×14×10 Capsules · With Swarna Bhasma & Kesar',
+      color: '#f3eef8',
+      img: './ED.Forte.png',
+      description: 'A powerful Ayurvedic formulation fortified with Swarna Bhasma, Kesar and Makardhwaj for men\'s vitality and stamina. Helps improve male strength and performance naturally, boosts physical energy, endurance and overall male vitality.',
+      composition_label: 'Each 500 mg capsule contains',
+      composition: [
+        ['Safed Musli', '20 mg'],
+        ['Akarkara', '50 mg'],
+        ['Safed Musli (Rakt)', '55 mg'],
+        ['Shatavari', '35 mg'],
+        ['Jaiphal', '30 mg'],
+        ['Dalchini', '35 mg'],
+        ['Talmakhana (Kokilaksha)', '25 mg'],
+        ['Bala', '20 mg'],
+        ['Kalonji (Black Seed)', '20 mg'],
+        ['Elaichi', '15 mg'],
+        ['Ashwagandha', '15 mg'],
+        ['Kaunch Beej', '30 mg'],
+        ['Gokshura', '10 mg'],
+        ['Abhrak Bhasma', '5 mg'],
+        ['Swarna Bhasma', '10 mcg'],
+        ['Shilajit', '15 mg'],
+        ['Giloy', '10 mg'],
+        ['Nagkesar', '10 mg'],
+        ['Vidarikand', '15 mg'],
+        ['Kesar', '5 mg'],
+        ['Salam Panja', '50 mg'],
+        ['Salam Mishri', '20 mg'],
+      ],
+      benefits: ['Helps improve male strength and performance naturally','Useful in managing erectile dysfunction','Helps control premature ejaculation','Reduces stress-related sexual weakness and fatigue','Boosts physical energy, endurance and overall male vitality'],
+      indications: ['Erectile Dysfunction','Low Libido & Sexual Weakness','Premature Ejaculation','Fatigue & Low Stamina'],
+    },
+  };
+
+  function openModal(id) {
+    const p = products[id];
+    if (!p) return;
+    const compositionRows = p.composition.map(([herb, dose]) =>
+      `<tr><td>${herb}</td><td>${dose}</td></tr>`
+    ).join('');
+    const benefitsList = p.benefits.map(b => `<li class="flex items-start gap-2 text-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary mt-0.5 flex-shrink-0" style="font-size:16px;font-variation-settings:'FILL' 1;">check_circle</span>${b}</li>`).join('');
+    const indicationsList = p.indications.map(i => `<span class="tag-badge" style="background:${p.color};color:#43493e;">${i}</span>`).join('');
+
+    document.getElementById('modal-content').innerHTML = `
+      <div class="flex gap-6 items-start mb-6 flex-wrap">
+        <div class="rounded-2xl overflow-hidden flex-shrink-0" style="width:100px;height:100px;background:${p.color};">
+          <img src="${p.img}" alt="${p.name}" class="w-full h-full object-cover object-top" onerror="this.style.display='none'"/>
+        </div>
+        <div class="flex-1 min-w-0">
+          <p class="text-xs font-semibold tracking-widest uppercase text-gold mb-1">${p.type}</p>
+          <h2 class="font-serif text-2xl font-bold text-primary mb-1">${p.name}</h2>
+          <p class="text-on-surface-variant text-sm italic">${p.tagline}</p>
+        </div>
+      </div>
+      <p class="text-sm text-on-surface-variant leading-relaxed mb-6">${p.description}</p>
+
+      <div class="mb-6">
+        <h3 class="font-serif text-base font-semibold text-primary mb-3">${p.composition_label}</h3>
+        <div class="rounded-xl overflow-hidden border border-outline-variant/40">
+          <table class="composition-table"><tbody>${compositionRows}</tbody></table>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+        <div>
+          <h3 class="font-serif text-base font-semibold text-primary mb-3">Benefits</h3>
+          <ul class="space-y-2">${benefitsList}</ul>
+        </div>
+        <div>
+          <h3 class="font-serif text-base font-semibold text-primary mb-3">Indicated In</h3>
+          <div class="flex flex-wrap">${indicationsList}</div>
+        </div>
+      </div>
+
+      <div class="pt-5 border-t border-outline-variant/30 flex flex-wrap gap-3">
+        <a href="#contact" onclick="closeModal()" class="btn-primary" style="padding:0.7rem 1.6rem;">Enquire About This Product</a>
+        <a href="https://wa.me/912532348000" target="_blank" class="btn-secondary" style="padding:0.7rem 1.6rem;">WhatsApp Us</a>
+      </div>
+    `;
+    document.getElementById('modal-overlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    document.getElementById('modal-overlay').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function closeModalOnOverlay(e) {
+    if (e.target === document.getElementById('modal-overlay')) closeModal();
+  }
+
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+</script>
+</body>
+</html>
